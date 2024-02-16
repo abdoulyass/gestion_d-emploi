@@ -37,6 +37,7 @@ td{
 
 .modal-body{
   padding: 23px!important;
+  background-color: #ffffff!important;
 }
 .layout_padding {
   padding-top: 120px;
@@ -990,6 +991,18 @@ a:focus {
   color: inherit;
 }
 
+
+@media print{
+  .table thead tr td {
+     border: 1px solid #000000!important;
+  }
+  .table tbody tr td {
+    border: 1px solid #000000!important;
+ }
+}
+.card-header{
+  background:none;
+}
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
 .aut{
@@ -1125,7 +1138,7 @@ color:#000000;
 
 }
 .top{
-  margin-top: 43px!important;
+  margin-top: 19px!important
 }
 .modal_close{
   background: none;
@@ -1163,7 +1176,7 @@ color:#000000;
 .modal-content{
          top: -52%;
           left: -69%;
-          transform: translate(49%, 33%);
+          transform: translate(49%, 17%);
           width: 600px;
           height: 400px;
 }
@@ -1173,16 +1186,7 @@ color:#000000;
 }
 
 .frame {
-	position: absolute;
-	top: 47%;
-  left: 49%;
-	width: 400px;
-	height: 400px;
-	margin-top: -200px;
-	margin-left: -200px;
-	border-radius: 2px;
 	
-	overflow: hidden;
 	color: #333;
 
 }
@@ -1213,12 +1217,14 @@ color:#000000;
   display: block;
 }
 
+
 .upload-input {
-	position: relative;
-	top: -62px;
-	left: 0;
-	width: 400px;
-	height: 100%;
+  bottom: -93px;
+  position: absolute;
+  left: 53px;
+  top: 26px;
+  width: 500px;
+  height: 198px;
 	opacity: 0;
 }
 
@@ -1241,3 +1247,251 @@ color:#000000;
 } */
 
 
+.modal-header{
+  gap: 20px;
+  border: none;
+  padding: 21px;
+  padding-bottom: 0px!important;
+}
+.modal-body{
+  border: none;
+  background: #fff;
+  padding: 0;
+  padding-top: 0!important;
+  padding-bottom: 6px!important;
+}
+.modal-footer{
+  border: none;
+}
+.modal-footer .btn:nth-child(1){
+  box-shadow: inset 0 0 0 1px #c8cad2;
+  font-weight: 400;
+  font-size: 17px;
+  font-weight: 500;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 32px;
+  margin-top: 1px;
+  appearance: none;
+  color: #fff;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #1a73e8;
+  transition: all 0.2s;
+  cursor: pointer;
+  box-shadow: 0 6px 6px -6px rgb(189,193,198);
+}
+.modal-footer .btn:nth-child(1):hover ,.annuler:hover{
+  letter-spacing: 1px;
+}
+.annuler{
+  box-shadow: inset 0 0 0 1px #c8cad2;
+  font-weight: 400;
+  font-size: 17px;
+  font-weight: 500;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 32px;
+  margin-top: 1px;
+  appearance: none;
+  color: grey;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.2s;
+  cursor: pointer;
+  box-shadow: 0 6px 6px -6px rgb(189,193,198);
+}
+
+
+
+.modal-header>div h3 {
+  font-weight: 600;
+  color: #12101c!important;
+  margin: 0 0 0.5rem;
+  font-size: 18px;
+  margin-top: 10px;
+ 
+}
+.dropzone .text i{
+  color: #428ee6;
+  font-size: 26px;
+  margin-bottom: 13px;
+  margin-top: 20px;
+}
+.guestbtn{
+  position: absolute!important;
+  bottom: 7%;
+  right: 34%;
+  color: #fff !important;
+}
+.modal_close{
+  position: absolute;
+    top: 7px;
+    right: 11px;
+    font-size: 26px;
+    color:#12101c
+}
+div.dt-buttons>.dt-button:nth-child(2){
+  border: none;
+    color: #fff;
+    border-radius: 6px;
+    background: #ff0000;
+}
+div.dt-buttons>.dt-button:nth-child(2):hover{
+  background: #ff0000 !important;
+  border: none;
+}
+div.dt-buttons>.dt-button:nth-child(1){
+  border: none;
+    color: #fff;
+    border-radius: 6px;
+    background: #007bff;;
+}
+div.dt-buttons>.dt-button:nth-child(1):hover{
+  background: #007bff!important;
+  border: none;
+}
+div.dt-buttons>.dt-button:nth-child(3){
+  border: none;
+    color: #fff;
+    border-radius: 6px;
+    background: #bec2c6;
+}
+div.dt-buttons>.dt-button:nth-child(3):hover{
+  background: #bec2c6!important;
+  border: none;
+}
+div.dt-buttons>.dt-button:nth-child(4){
+  border: none;
+    color: #fff;
+    border-radius: 6px;
+    background: #31bf52;
+}
+div.dt-buttons>.dt-button:nth-child(4):hover{
+  background: #31bf52 !important;
+  border: none;
+}
+.dataTables_wrapper .dataTables_length{
+  margin-left: 20px;
+}
+.notification{
+  position: fixed;
+  width: 29%;
+  height: 83%;
+  /* top: 0; */
+  right: 0;
+  bottom: 0;
+  background: #eaeaea;
+}
+
+.notification-ui_icon .unread-notification {
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    border-radius: 7px;
+    background-color: #66BB6A;
+    position: absolute;
+    top: 7px;
+    left: 12px;
+}
+
+@media (min-width: 900px) {
+    .notification-ui_icon .unread-notification {
+        left: 20px;
+    }
+}
+
+.notification-ui_dd {
+    padding: 0;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 5px 20px -3px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 5px 20px -3px rgba(0, 0, 0, 0.16);
+    border: 0;
+    max-width: 400px;
+}
+
+@media (min-width: 900px) {
+    .notification-ui_dd {
+        min-width: 400px;
+        position: absolute;
+        left: -192px;
+        top: 70px;
+    }
+}
+
+.notification-ui_dd:after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 10px;
+    border-top: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #fff;
+    border-left: 15px solid transparent;
+}
+
+.notification-ui_dd .notification-ui_dd-header {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+
+.notification-ui_dd .notification-ui_dd-header h3 {
+    margin-bottom: 0;
+}
+
+.notification-ui_dd .notification-ui_dd-content {
+    max-height: 500px;
+    overflow: auto;
+}
+
+.notification-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin: 0 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notification-list--unread {
+    position: relative;
+}
+
+.notification-list--unread:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -25px;
+    height: calc(100% + 1px);
+    border-left: 2px solid #29B6F6;
+}
+
+.notification-list .notification-list_img img {
+    height: 48px;
+    width: 48px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.notification-list .notification-list_detail p {
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.notification-list .notification-list_feature-img img {
+    height: 48px;
+    width: 48px;
+    border-radius: 5px;
+    margin-left: 20px;
+}

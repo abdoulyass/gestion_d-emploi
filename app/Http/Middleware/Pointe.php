@@ -19,10 +19,7 @@ class Pointe
         if (auth()->check()) {
             if (session()->get('heure_pointage') === null) {
                session(['heure_pointage' => now()]);
-               $data= session('heure_pointage');
-                $user = Auth::user();
-                $user->update(['name' =>$data]);
-                $user->save();
+               
             }
      
         }

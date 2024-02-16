@@ -46,7 +46,7 @@
                   <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                 </li>
                 <li class="nav-item show">
-                  <div class="dropdown " style="    margin-right: 19px;" id="hover-dropdown">
+                  <div class="dropdown "id="hover-dropdown">
                     <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         candidature
                     </a>
@@ -63,9 +63,9 @@
                ">
                @auth
                
-               <li class="nav-item" style="    margin-right: -26px;">
+               <li class="nav-item" >
                 <div class="dropdown show" >
-                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-left: 9px ">
                     <i class="fa-regular fa-user"></i>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="left: -127px;">
@@ -75,6 +75,12 @@
                       <button type="submit" class=" nav-link" style="background:none;border:none; font-size:18px;">Logout</button>
                   </div>
                 </div>
+              </li>
+              <li>
+                <a href="#" style=""><i class="notificon fa-solid fa-bell" style="font-size: 19px;
+                  padding-top: 11px;
+                  cursor: pointer;
+              "></i></a>
               </li>
               </form>
                 @endauth
@@ -92,4 +98,5 @@
           </nav>
         </div>
       </div>
+      
     </header>

@@ -12,7 +12,10 @@ class Dept extends Model
         'deptName'
     ];
     
-
+    public function department()
+    {
+        return $this->belongsTo(Dept::class, 'dept_id');
+    }
     public function offres(): HasMany
     {
         return $this->hasMany(Offre::class);

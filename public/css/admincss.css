@@ -4,6 +4,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	line-height: 1.4;
 }
 
 a {
@@ -267,10 +268,10 @@ table.table .avatar {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 280px;
+	width: 230px;
 	height: 100%;
 	background: var(--light);
-	z-index: 2000;
+	z-index: 20;
 	font-family: var(--lato);
 	transition: .3s ease;
 	overflow-x: hidden;
@@ -280,9 +281,10 @@ table.table .avatar {
 	display: none;
 }
 #sidebar.hide {
-	width: 56px;
+	width: 58px;
 }
 #sidebar .brand {
+	padding-left: 14%;
 	font-size: 24px;
 	font-weight: 700;
 	height: 56px;
@@ -290,8 +292,8 @@ table.table .avatar {
 	align-items: center;
 	color: var(--blue);
 	position: sticky;
-	top: 7px;
-	left: 13px;
+	top: 0px;
+	left: -2px;
 	background: var(--light);
 	z-index: 500;
 	padding-bottom: 20px;
@@ -305,7 +307,7 @@ table.table .avatar {
 }
 #sidebar .side-menu {
 	width: 100%;
-	    margin-top: 100px;
+	    margin-top: 10%;;
 }
 #sidebar .side-menu li {
 	height: 48px;
@@ -397,19 +399,32 @@ button:focus{
 
 /* CONTENT */
 #content {
-	position: relative;
-	width: calc(100% - 280px);
-	left: 280px;
-	transition: .3s ease;
+	position: absolute;
+    width: calc(100% - 230px);
+    left: 232px;
+    transition: .3s ease;
     top: -24px;
+	height: 100%;
 }
 #sidebar.hide ~ #content {
 	width: calc(100% - 60px);
 	left: 60px;
 }
 
-
-
+.card-header{
+	background:#fff;
+}
+.modl::before {
+    content: '';
+	position: absolute;
+    width: 100%!important;
+    height: 85%!important;
+    background: #00008b24!important;
+    z-index: 2!important;
+    top: 22px!important;
+    right: 6px!important;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
 /* NAVBAR */
 #content nav{
@@ -423,7 +438,7 @@ button:focus{
     position: sticky;
     top: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 2;
    }
 .dataTables_wrapper .dataTables_length select{
 	width: 50px!important;
@@ -549,7 +564,9 @@ i{
 }
 /* NAVBAR */
 
-
+#content .container{
+	padding: 0
+}
 
 
 
@@ -782,12 +799,12 @@ i{
 
 @media screen and (max-width: 768px) {
 	#sidebar {
-		width: 200px;
+		width: 164px;
 	}
 
 	#content {
-		width: calc(100% - 60px);
-		left: 200px;
+		width: calc(100% - 164px);
+		left: 166px;
 	}
 
 	#content nav .nav-link {

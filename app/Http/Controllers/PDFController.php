@@ -42,7 +42,11 @@ class PDFController extends Controller
                 'niveau_etude' => $request->input('niveaux'),
                 'fonction' => $request->input('description'),
                 'type_contrat' => $request->input('typedecontract'),
+                
+
             ]);
+
+            
         } else {
             
     

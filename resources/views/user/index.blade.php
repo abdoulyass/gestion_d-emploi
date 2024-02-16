@@ -7,8 +7,12 @@
       <div class="row">
         <div class="col-md-6 ">
           <div class="detail-box">
-            
+          
+
             @php
+            if(session()->has('failed')){
+            
+            }
             $data = session()->get('heure_pointage');
             $currentTime = now();
             
@@ -466,6 +470,66 @@
     </div>
   </div>
 </section>
-
+<div class="dropdown-menu notification-ui_dd "  id='notification' style='position: fixed;
+right: 0;
+margin-left: 84%;
+margin-top: 33px;' aria-labelledby="navbarDropdown">
+ <div class="notification-ui_dd-header">
+     <h3 class="text-center">Notification</h3>
+ </div>
+ <div class="notification-ui_dd-content">
+     <div class="notification-list notification-list--unread">
+         <div class="notification-list_img">
+         
+         </div>
+         <div class="notification-list_detail">
+             <p><b>John Doe</b> reacted to your post</p>
+             <p><small>10 mins ago</small></p>
+         </div>
+         <div class="notification-list_feature-img">
+             
+         </div>
+     </div>
+     <div class="notification-list notification-list--unread">
+         <div class="notification-list_img">
+          
+         </div>
+         <div class="notification-list_detail">
+             <p><b>Richard Miles</b> reacted to your post</p>
+             <p><small>1 day ago</small></p>
+         </div>
+         <div class="notification-list_feature-img">
+           
+         </div>
+     </div>
+     <div class="notification-list">
+         <div class="notification-list_img">
+             
+         </div>
+         <div class="notification-list_detail">
+             <p><b>Brian Cumin</b> reacted to your post</p>
+             <p><small>1 day ago</small></p>
+         </div>
+         <div class="notification-list_feature-img">
+          $
+         </div>
+     </div>
+     <div class="notification-list">
+         <div class="notification-list_img">
+             
+         </div>
+         <div class="notification-list_detail">
+             <p><b>Lance Bogrol</b> reacted to your post</p>
+             <p><small>1 day ago</small></p>
+         </div>
+         <div class="notification-list_feature-img">
+             
+         </div>
+     </div>
+ </div>
+ <div class="notification-ui_dd-footer">
+     <a href="#!" class="btn annuler btn-block">hide All</a>
+ </div>
+</div>
 
 @endsection

@@ -37,7 +37,6 @@
 
               @php
               $userRole = Auth::user()->role;
-              
              @endphp
                @if ($userRole == 3)    
               <div class="item" style="position: relative; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#createOffre">
@@ -202,10 +201,18 @@
       </section>
        
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" >
+        <div class="modal-dialog " >
           <div class="modal-content" >
-              <button type="button" class="btn-close modal_close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-body">
+            <div class="modal-header">
+              <svg xmlns="http://www.w3.org/2000/svg"  style="width: 143px;" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 116 116"><defs><filter id="a" width="193.3%" height="193.3%" x="-46.7%" y="-33.3%" filterUnits="objectBoundingBox"><feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"></feGaussianBlur><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.0705882353 0 0 0 0 0.062745098 0 0 0 0 0.109803922 0 0 0 0.14 0"></feColorMatrix></filter><rect id="b" width="60" height="60" x="0" y="0" rx="4"></rect></defs><g fill="none" fill-rule="evenodd"><circle cx="58" cy="58" r="58" fill="#E6F2FF"></circle><g transform="translate(28 28)"><use fill="#000" filter="url(#a)" xlink:href="#b"></use><use fill="#FFF" xlink:href="#b"></use><path fill="#428EE6" d="M4 0h52a4 4 0 014 4v20H0V4a4 4 0 014-4z"></path></g><path fill="#C0C0C4" d="M60.3 73.7c.4-.6 1.2-.9 1.8-.6.8.3 1.1 1.2.8 2C62 76.7 60.2 78 58 78s-4.1-1.2-4.9-3c-.3-.7 0-1.6.8-1.9.7-.3 1.5 0 1.8.8l.1.1c.3.6 1.2 1 2.2 1 1 0 2-.4 2.3-1.1zM48.5 63a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm19 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"></path><rect width="22" height="2" x="35" y="34" fill="#C6E0FF" rx="1"></rect><rect width="22" height="2" x="35" y="38.9" fill="#C6E0FF" rx="1"></rect><rect width="10" height="2" x="35" y="43.8" fill="#C6E0FF" rx="1"></rect><path fill="#FFF" fill-rule="nonzero" d="M72.5 20c2.5 0 4.5 2 4.5 4.5V38l-3.7 5a1 1 0 01-1.6 0L68 38V24.5c0-2.5 2-4.5 4.5-4.5z"></path><path fill="#2062AF" fill-rule="nonzero" d="M72.5 20c2.5 0 4.5 2 4.5 4.5V38l-3.7 5a1 1 0 01-1.6 0L68 38V24.5c0-2.5 2-4.5 4.5-4.5zm0 2a2.5 2.5 0 00-2.5 2.6v11.9h5v-12c0-1.3-1.1-2.4-2.5-2.4z"></path></g></svg>
+              <div>
+                <h3 >Créer votre CV</h3>
+                <p style=" color: #4b4956;">Ajouter votre CV vous permet de postuler très rapidement à de nombreuses opportunités depuis n'importe quel appareil.</p>
+              </div>
+            </div>
+              <button type="button" class="btn-close modal_close" data-bs-dismiss="modal" st7 aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body" style="
+            background: #f0f8ff26;">
               <div class="frame">
                 <form action='{{ route('poste.sendposte') }}' method="post" enctype="multipart/form-data">
                 @csrf
@@ -213,9 +220,10 @@
                     <div class="row">
                       <div class="col">
                         @auth
-                        <div class="dropzone">
+                        <div class="dropzone" style="width: 100%">
                           <div class="text" style="display: flex; flex-direction:column">
-                            <p>Faites glisser ou cliquez pour Télécharger le fichier</p>
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <p style="color: #428ee6;" >Faites glisser ou cliquez pour Télécharger le fichier</p>
                             <p>(.doc, .docx, .pdf, .rtf, .txt. Taille max. 2MB)</p>
                              </div>
                                 <input type="file" name='cv' class="upload-input" />
@@ -227,27 +235,39 @@
                                </div>
                                 </div>
                       </div>
-                      <div class="col">
-                        <div class="form-group nonauth">
+                    
+                        <div class="col" style="margin-top: 20px;padding:0;">
+                          <div class="form-group ">
+
+                            <label for="exampleInputEmail1">numero telephone</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name='numero' aria-describedby="emailHelp" placeholder="Enter numero">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                          </div>
                          
+                        </div> 
+
+                        <div class="modal-footer" >
                          
-                          <label for="exampleInputEmail1">numero telephone</label>
-                          <input type="text" class="form-control" id="exampleInputEmail1" name='numero' aria-describedby="emailHelp" placeholder="Enter numero">
-                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                          <button type="submit"  class="btn subbtn " style="background:" data-dismiss="modal">telecharger</button>
+                        </form>
+                        <button  class="btn annuler" style="    position: absolute;
+                        right: 177px;" data-bs-dismiss="modal" st7 aria-label="Close">annuler</button>
                         </div>
-                       
-                      </div>  
-                      <div class="modal-footer" >
-                        <button type="submit"  class="btn subbtn btn-secondary" style="background:" data-dismiss="modal">diposer</button>
-                      </div>
+                        
+                    
                       </div>
                     </div>
-                  </form>
+                 
                     @endauth
                     @guest
                    
-                    <div class="dropzone" style="margin-top:100px; display:flex;justify-content:center;
-                    align-items:center;">
+                    <div class="dropzone" style="width: 100%;
+                    /* margin-top: 100px; */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    margin: 34px -4px;">
                       <div class="text" style="display: flex; flex-direction:column">
                         <p>vous n'est pas authentifier</p>
                          </div>
@@ -260,8 +280,9 @@
                   </div>  
                   <div class="modal-footer" >
                       
-                    <a href="{{route('login')}}" class="btn btn-secondary" style="background:" data-dismiss="modal">se connecter</a>
-                  </div>
+                    <a href="{{route('login')}}" class="btn btn-secondary" style="margin-right: 34%;
+                    margin-bottom: 20px; color:#ffffff;" data-dismiss="modal">se connecter</a>
+                  </div> 
                   </div>
                 </div>
                        
@@ -275,10 +296,17 @@
           </div>
         </div>
       </div>
-      <div class="modal" id="createOffre" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal " id="createOffre" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog " >
-          <section class="modal-content model2">
-            <div class="modal-body ">
+          <section class="modal-content model2 ">
+            <div class="modal-header">
+              <svg xmlns="http://www.w3.org/2000/svg"  style="width: 143px;" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 116 116"><defs><filter id="a" width="193.3%" height="193.3%" x="-46.7%" y="-33.3%" filterUnits="objectBoundingBox"><feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"></feGaussianBlur><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.0705882353 0 0 0 0 0.062745098 0 0 0 0 0.109803922 0 0 0 0.14 0"></feColorMatrix></filter><rect id="b" width="60" height="60" x="0" y="0" rx="4"></rect></defs><g fill="none" fill-rule="evenodd"><circle cx="58" cy="58" r="58" fill="#E6F2FF"></circle><g transform="translate(28 28)"><use fill="#000" filter="url(#a)" xlink:href="#b"></use><use fill="#FFF" xlink:href="#b"></use><path fill="#428EE6" d="M4 0h52a4 4 0 014 4v20H0V4a4 4 0 014-4z"></path></g><path fill="#C0C0C4" d="M60.3 73.7c.4-.6 1.2-.9 1.8-.6.8.3 1.1 1.2.8 2C62 76.7 60.2 78 58 78s-4.1-1.2-4.9-3c-.3-.7 0-1.6.8-1.9.7-.3 1.5 0 1.8.8l.1.1c.3.6 1.2 1 2.2 1 1 0 2-.4 2.3-1.1zM48.5 63a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm19 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"></path><rect width="22" height="2" x="35" y="34" fill="#C6E0FF" rx="1"></rect><rect width="22" height="2" x="35" y="38.9" fill="#C6E0FF" rx="1"></rect><rect width="10" height="2" x="35" y="43.8" fill="#C6E0FF" rx="1"></rect><path fill="#FFF" fill-rule="nonzero" d="M72.5 20c2.5 0 4.5 2 4.5 4.5V38l-3.7 5a1 1 0 01-1.6 0L68 38V24.5c0-2.5 2-4.5 4.5-4.5z"></path><path fill="#2062AF" fill-rule="nonzero" d="M72.5 20c2.5 0 4.5 2 4.5 4.5V38l-3.7 5a1 1 0 01-1.6 0L68 38V24.5c0-2.5 2-4.5 4.5-4.5zm0 2a2.5 2.5 0 00-2.5 2.6v11.9h5v-12c0-1.3-1.1-2.4-2.5-2.4z"></path></g></svg>
+              <div>
+                <h3 >poster un offre </h3>
+                <p style=" color: #4b4956;">Ajouter votre CV vous permet de postuler très rapidement à de nombreuses opportunités depuis n'importe quel appareil.</p>
+              </div>
+            </div>
+            <div class="modal-body " style="background: #ffffff">
               <form class="row g-3" method="post"  action='{{ route('poste.sendposte') }}' enctype="multipart/form-data" >
                 @csrf
                 <div class="row mt-2" style=" margin-top: 27px !important; margin-left: 4px;">
@@ -348,6 +376,7 @@
               <div class="modal-footer" style="    display: flex;
               align-items: center;
               justify-content: center;
+              background:#ffffff;
           " >   
                 <button type="submit" class="btn btn-primary" data-dismiss="modal" style='width: 34%;'>publier</button>
               </div>

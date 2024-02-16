@@ -10,9 +10,9 @@
      <section id="content" >
         <nav>
             <i class='bx bx-menu' ></i>
-            <a href="#" class="profile">
+            {{-- <a href="#" class="profile">
                 <img src="img/people.png">
-            </a>
+            </a> --}}
         </nav>
         <main>
             @yield('main')
@@ -22,10 +22,10 @@
 
 
         <footer class="footer_section">
-            @yield('includes.footer')
+            @include('includes.footerad')
          </footer>
          {{-- <script src="{{ asset('js/js') }}"></script> --}}
-         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
          
          <!-- Google Map -->
          {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script> --}}

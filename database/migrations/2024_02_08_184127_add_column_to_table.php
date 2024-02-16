@@ -28,7 +28,7 @@ return new class extends Migration
             $table->dropColumn('nom');
             $table->dropColumn('prenom');
             $table->dropColumn('email');
-            $table->dropColumn('temps_de_login_nomer_pointage');
+            $table->dropColumn('temps_de_ointage');
         });
     }
 };

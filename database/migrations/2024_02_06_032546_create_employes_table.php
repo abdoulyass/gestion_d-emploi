@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('depts_id')->unsigned();
             $table->foreign('depts_id')->references('id')->on('depts');
             $table->timestamps();
+          
         });
     }
 

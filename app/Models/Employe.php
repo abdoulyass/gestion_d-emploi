@@ -11,13 +11,10 @@ class Employe extends User
     use HasFactory;
     protected $fillable = [
         'salary',
-        'firstName',
+        'depts_id',
         'name',
         'email',
-        'password',
-         'adress',
-         'role',
-         'user_number',
+
     ];
 
     public function employes(): BelongsTo

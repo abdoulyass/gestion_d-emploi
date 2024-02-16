@@ -4,14 +4,13 @@
 @section('main')
 <div class="head-title">
   <div class="left">
-    <h1>Dashboard</h1>
     <ul class="breadcrumb">
       <li>
         <a href="#">Dashboard</a>
       </li>
       <li><i class='fas fa-chevron-right'></i></li>
       <li>
-        <a class="active" href="#">home</a>
+        <a class="active" href="#">condidature</a>
       </li>
     </ul>
   </div>
@@ -31,12 +30,7 @@
     
   
    @else
-    <div class="card-header">
-      <div style='text-align:center'>
-             <h3>condidature</h3>
-      </div>
-   
-    </div>
+    
     @if (session('success'))
     <div class="alert alert-success">
         {{ session('success') }}
@@ -46,7 +40,7 @@
 
 
 
-       <table class="table table-bordered  display " id="myTable">
+       <table class="table-striped " id="myTable">
         <thead>
           <tr>
             <th scope="col">matricule</th>
@@ -104,25 +98,60 @@
   @endif
     
    
-
+  
 <!-- CONTENT -->
-@endsection 
 
+ @endsection
 @section('footer')
   
- @endsection
+
  @push('scripts')
- <script  src="{{ asset('js/js.js') }}"></script>
- <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+ <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+ <script src="{{ asset('js/js.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.js') }}"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
  <script>
-     $(document).ready(function () {
-      $('#myTable').DataTable({
-            columnDefs: [{
-                targets: [5],
-                orderable: false
-            }]
-         });
-     });
+  $(document).ready(function() {
+    $('#myTable').DataTable({
+        dom: 'Blfrtip',
+        buttons: [
+            {
+                extend: 'excelHtml5',
+                title: 'Data_export',
+                exportOptions: {
+                    columns: ':not(:last-child)' // Exclude the last column from export
+                }
+            },
+            {
+                extend: 'pdfHtml5',
+                title: 'Data_export',
+                exportOptions: {
+                    columns: ':not(:last-child)' // Exclude the last column from export
+                }
+            },
+            {
+                extend: 'copyHtml5',
+                title: 'Data_export',
+                exportOptions: {
+                    columns: ':not(:last-child)' // Exclude the last column from export
+                }
+            },
+            {
+                extend: 'csvHtml5',
+                title: 'Data_export',
+                exportOptions: {
+                    columns: ':not(:last-child)' // Exclude the last column from export
+                }
+            }
+        ]
+
+    } );
+} );
  </script>
  @endpush
- 

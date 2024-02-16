@@ -6,11 +6,10 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-
+       
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -18,7 +17,7 @@
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0  "  style="width: 428px;" >
                 @yield('content')
                
-                <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg" style=" margin-bottom: 6%;  z-index: 200;   ">
+                <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg" id=" loginbody " style=" margin-bottom: 6%;  z-index: 200;   ">
                     @if(request()->routeIs('login'))
                     <h3 class="font-bold text-blue-500 to-blue-600" style="text-align: center;font-size: 21px;">Welcome back</h3>
                     <p class="mb-0" style="text-align: center">Sign in with these credentials:<br></p>
